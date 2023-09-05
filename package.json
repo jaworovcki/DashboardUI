@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jaworovcki/Web-Applications-LPNU/issues"
   },
-  "homepage": "https://github.com/jaworovcki/Web-Applications-LPNU#readme"
+  "homepage": "https://github.com/jaworovcki/Web-Applications-LPNU#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
