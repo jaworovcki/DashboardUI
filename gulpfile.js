@@ -1,73 +1,25 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass")(require('sass'));;
-var cssnano = require("gulp-cssnano");
-var autoprefixer = require('gulp-autoprefixer');
-var imagemin = require('gulp-imagemin');
-var concat = require("gulp-concat");
-var uglify = require("gulp-uglify");
-var rename = require("gulp-rename");
-var browserSync = require('browser-sync').create();
+import gulp from 'gulp';
+import { path } from './gulp/config/path.js';
+import { plugins } from './gulp/config/plugins.js'
 
-gulp.task("html", function () {
-    return gulp.src("app/*.html")
-        .pipe(gulp.dest("dist"))
-        .pipe(browserSync.stream());
-});
+global.app = {
+    path: path,
+    gulp: gulp,
+    plugins: plugins
+}
 
-gulp.task("css", function () {
-    return gulp.src("app/css/*.css")
-        .pipe(concat('styles.css'))
-        .pipe(cssnano())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest("dist/css"))
-        .pipe(browserSync.stream());
-});
-
-gulp.task("sass", function () {
-    return gulp.src("app/sass/*.sass")
-        .pipe(concat('styles.sass'))
-        .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(cssnano())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest("dist/css"))
-        .pipe(browserSync.stream());
-});
-
-gulp.task("scripts", function () {
-    return gulp.src("app/js/*.js")
-        .pipe(concat('scripts.js'))
-        .pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest("dist/js"))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('imgs', function () {
-    return gulp.src("app/img/*.{jpg,jpeg,png,gif}")
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
-            interlaced: true
-        }))
-        .pipe(gulp.dest("dist/images"))
-        .pipe(browserSync.stream());
-});
-
-gulp.task("watch", function () {
-    browserSync.init({
-        server: {
-            baseDir: ["./app", "./dist"]
-        }
-    });
-    gulp.watch("app/*.html", gulp.series("html"));
-    gulp.watch("app/js/*.js", gulp.series("scripts"));
-    gulp.watch("app/sass/*.sass", gulp.series("sass"));
-    gulp.watch("app/img/*.{jpg,jpeg,png,gif}", gulp.series("imgs"))
-    gulp.watch("dist").on('change', browserSync.reload);
-});
-
-gulp.task("default", gulp.series("html", "sass", "css", "scripts", "imgs", "watch"));
+import { copy } from './gulp/tasks/copy.js';
+import { reset } from './gulp/tasks/reset.js';
+import { html } from './gulp/tasks/html.js';
+import { server } from './gulp/tasks/server.js';
+import { scss } from './gulp/tasks/scss.js';
+import { js } from './gulp/tasks/js.js';
+function watcher() {
+    gulp.watch(path.watch.files, copy);
+    gulp.watch(path.watch.html, html);
+    gulp.watch(path.watch.scss, scss);
+    gulp.watch(path.watch.js, js);
+}
+const mainTasks = gulp.parallel(copy, html, scss, js);
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+gulp.task('default', dev);
