@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Admin Panel</title>
 </head>
+
 <body>
     @@include('html/header.html',{})
     <div class="container">
@@ -37,8 +39,89 @@
                     <div><span>350</span>New Message</div>
                 </div>
             </section>
+            <section class="sectionMain">
+                <section class="sectionLeft">
+                    <div class="site-statistic">
+                        <div class="site-statistic-header">
+                            <span>SITE STATISTIC</span>
+                            <button><img src="./img/gear-icon.png" alt=""></button>
+                        </div>
+                        <canvas id="site-statistic-сhart"></canvas>
+                    </div>
+                    <div class="todo-list">
+                        <div class="todo-list-header">
+                            <p>ToDo List</p><button><img src="@img/plus-icon.png" alt=""></button>
+                        </div>
+                        <div class="todo-list-items">
+                            <ul>
+                                <li>
+                                    <div class="item-text"><img src="@img/dotes-todo-icon.png" alt="">Do your ToDo List
+                                        today at 6AM GMT </div>
+                                    <div><button><img src="@img/check-icon.png" alt=""></button><button><img
+                                                src="@img/remove-icon.png" alt=""></button></div>
+                                </li>
+                                <li>
+                                    <div class="item-text"><img src="@img/dotes-todo-icon.png" alt="">Do your ToDo List
+                                        today at 6AM GMT </div>
+                                    <div><button><img src="@img/check-icon.png" alt=""></button><button><img
+                                                src="@img/remove-icon.png" alt=""></button></div>
+                                </li>
+                                <li>
+                                    <div class="item-text"><img src="@img/dotes-todo-icon.png" alt="">Do your ToDo List
+                                        today at 6AM GMT </div>
+                                    <div><button><img src="@img/check-icon.png" alt=""></button><button><img
+                                                src="@img/remove-icon.png" alt=""></button></div>
+                                </li>
+                                <li>
+                                    <div class="item-text"><img src="@img/dotes-todo-icon.png" alt="">Do your ToDo List
+                                        today at 6AM GMT </div>
+                                    <div><button><img src="@img/check-icon.png" alt=""></button><button><img
+                                                src="@img/remove-icon.png" alt=""></button></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gbmails">
+                        <div class="gb">
+                            <p class="info">113/200GB</p>
+                            <p class="text">From your hosting usage</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="emails">
+                            <p class="info">535/986</p>
+                            <p class="text">Emails read</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications">
+                        <div class="notifications-header">
+                            <p>Notifications</p><button><img src="@img/gear-icon.png" alt=""></button>
+                        </div>
+                        <div class="notifications-items">
+                            <ul>
+                                <li><img src="@img/twitter-icon.png" alt="">
+                                    <div class="text mentioned">There are 5 new twitter messages are waiting you for
+                                        reply them!</div>
+                                </li>
+                                <li><img src="@img/email2-icon.png" alt="">
+                                    <div class="text message">There are 5 new twitter messages are waiting you for reply
+                                        them!</div>
+                                </li>
+                                <li><img src="@img/dollars-icon.png" alt="">
+                                    <div class="text sales">There are 5 new twitter messages are waiting you for reply
+                                        them!</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
         </main>
     </div>
-
 </body>
+
 </html>
