@@ -8,6 +8,37 @@
 </head>
 <body>
     @@include('html/header.html',{})
+    <div class="container">
+        @@include('html/nav.html',{})
+        <main>
+            <section class="daily-stats">
+                <div class="stats-container">
+                    <div class="progress-bar mentioned">
+                        <img src="@img/twitter-icon.png" alt="">
+                    </div>
+                    <div><span>400</span>Mentioned</div>
+                </div>
+                <div class="stats-container">
+                    <div class="progress-bar sales">
+                        <img src="@img/dollars-icon.png" alt="">
+                    </div>
+                    <div><span>13140$</span>Today Sales</div>
+                </div>
+                <div class="stats-container">
+                    <div class="progress-bar visitors">
+                        <img src="@img/visitor-icon.png" alt="">
+                    </div>
+                    <div><span>9001</span>Today Visitors</div>
+                </div>
+                <div class="stats-container">
+                    <div class="progress-bar message">
+                        <div><img src="@img/email2-icon.png" alt=""></div>
+                    </div>
+                    <div><span>350</span>New Message</div>
+                </div>
+            </section>
+        </main>
+    </div>
 
 </body>
 </html>

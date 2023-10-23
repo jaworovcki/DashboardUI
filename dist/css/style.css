@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   padding: 0;
   margin: 0;
@@ -150,4 +152,145 @@ body {
 @font-face {
   font-family: HelveticaNeueLT Arabic;
   src: local("HelveticaNeueLT Arabic"), url(../fonts/HelveticaNeueLTArabic.ttf) format("ttf");
+}
+
+.daily-stats {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.daily-stats .stats-container {
+  width: 220px;
+  height: 110px;
+  border-radius: 7px;
+  background-color: #fafafc;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.daily-stats .stats-container .progress-bar {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.daily-stats .stats-container img {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+}
+
+.daily-stats .stats-container .mentioned {
+  border: 5px solid rgba(102, 183, 240, 0.25);
+}
+
+.daily-stats .stats-container .sales {
+  border: 5px solid rgba(165, 197, 98, 0.5);
+}
+
+.daily-stats .stats-container .visitors {
+  border: 5px solid rgba(255, 80, 63, 0.5);
+}
+
+.daily-stats .stats-container .message {
+  border: 5px solid rgba(246, 187, 66, 0.5);
+}
+
+.daily-stats .stats-container div {
+  display: flex;
+  flex-direction: column;
+  color: #a7a2a2;
+}
+
+.daily-stats .stats-container div span {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+#sidebar.collapsed {
+  width: 100px;
+  /* Нова ширина меню після згортання */
+}
+
+#sidebar.collapsed .sidebar-item-links div {
+  display: none;
+  /* Приховування тексту в посиланнях після згортання */
+}
+
+#sidebar.collapsed #collapse img {
+  transform: rotate(180deg);
+  /* Зміна напрямку стрілки на кнопці */
+}
+
+.notification-icon.hide::after {
+  content: "";
+  display: none;
+}
+
+.container.collapsed {
+  grid-template-columns: 100px 1266px;
+}
+
+.sectionMain.collapsed {
+  grid-template-columns: 670px 375px;
+}
+
+.data-graph-header {
+  font-size: 14px;
+  background-color: #f6f6f6;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.data-graph-header button {
+  background-color: transparent;
+}
+
+.data-graph-header span {
+  font-size: 20px;
+  color: #a7a2a2;
+}
+
+.data-graph .data-graph-section {
+  background-color: #9972b5;
+  color: #fafafc;
+}
+
+.data-graph .data-graph-section-data {
+  padding: 15px 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-graph .total-earned {
+  padding: 20px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-graph .total-earned-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-graph .total-earned .price {
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  width: 90px;
+}
+
+.data-graph .total-earned .text {
+  font-size: 14px;
 }
