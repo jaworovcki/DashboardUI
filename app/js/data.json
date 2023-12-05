@@ -1,0 +1,11 @@
+{
+  "usersColor": "rgba(246, 187, 66, 0.8)",
+  "salesColor": "rgba(31, 181, 172, 0.8)",
+  "months": ["January", "February", "March", "April", "May", "June"],
+  "usersData": [0, 550, 150, 300, 200, 300],
+  "salesData": [0, 400, 200, 300, 150, 320],
+  "dataGraphX":[2, 3, 5, 7, 8, 10, 11],
+  "dataGraphY":[0, 550, 150, 300, 200, 300, 0],
+  "dataBarX": ["1", "2", "3", "4", "5", "6", "7"],
+  "dataBarY": [7, 5, 6, 4, 5, 3, 2]
+}
