@@ -1,12 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
-    <title>Index</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Admin Panel</title>
 </head>
+
 <body>
-    <p>New Index file</p>
+    <header class="header">
+  <p><span class="bold">Dash</span>Board</p>
+  <div class="headerSearch">
+      <div class="input-container">
+          <input type="text">
+          <button><img src="img/search.png" alt=""></button>
+      </div>
+      <a href="" class="notification-icon bell"><img src="img/bell.png" alt=""></a>
+      <a href="" class="notification-icon email"><img src="img/email.png" alt=""></a>
+  </div>
+  <div class="headerUser">
+      <img src="img/user-icon.png" alt="">
+      <p><span class="bold">Hi</span>, Robert</p>
+      <img src="img/arrowDown.png" alt="">
+  </div>
+</header>
+
+    <div class="container">
+        <nav id="sidebar">
+  <ul id="sidebar-menu-items">
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/dashboard-icon.png" alt="dashboard-icon">
+              <div>
+                  <span class="sidebar-menu-text">Dashboard</span>
+                  <img src="img/arrow-icon-side-bar.png" class="sidebar-arrow" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/charts-icon.png" alt="charts-icon">
+              <div>
+                  <span class="sidebar-menu-text">Charts</span>
+                  <img src="img/arrow-icon-side-bar.png" class="sidebar-arrow" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/task-icon.png" alt="task-icon">
+              <div>
+                  <span class="sidebar-menu-text">Tasks</span>
+                  <img src="img/arrow-icon-side-bar.png" class="sidebar-arrow" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/comment-icon.png" alt="comment-icon">
+              <div>
+                  <span class="sidebar-menu-text">Comment<span class="notification-icon">9</span></span>
+                  <img src="img/arrow-icon-side-bar.png" class="sidebar-arrow" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/settings-icon.png" alt="settings-icon">
+              <div>
+                  <span class="sidebar-menu-text">Setting</span>
+                  <img src="img/arrow-icon-side-bar.png" class="sidebar-arrow" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/feedback-icon.png" alt="feedback-icon">
+              <div>
+                  <span class="sidebar-menu-text">Feedback</span>
+                  <img src="img/arrow-icon-side-bar.png" class="sidebar-arrow" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/links-icon.png" alt="links-icon">
+              <div>
+                  <span class="sidebar-menu-text">Links</span>
+                  <img src="img/arrow-icon-side-bar.png" class="sidebar-arrow" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/social-icon.png" alt="social-icon">
+              <div>
+                  <span class="sidebar-menu-text">Social</span>
+                  <img src="img/arrow-icon-side-bar.png" class="sidebar-arrow" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/email.png" alt="email-icon">
+              <div>
+                  <span class="sidebar-menu-text">Mail</span>
+                  <img src="img/arrow-icon-side-bar.png" class="sidebar-arrow" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/achievement-icon.png" alt="achievement-icon">
+              <div>
+                  <span class="sidebar-menu-text">Achievement</span>
+                  <img src="img/arrow-icon-side-bar.png" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <a href="#" class="sidebar-item-links">
+              <img src="img/logout-icon.png" alt="logout-icon">
+              <div>
+                  <span class="sidebar-menu-text">Logout</span>
+                  <img src="img/arrow-icon-side-bar.png" alt="arrow-icon">
+              </div>
+          </a>
+      </li>
+      <li>
+          <button id="collapse" class="sidebar-item-links">
+              <img src="img/collapse-menu-icon.png" alt="collapse-menu-icon">
+              <div>
+                  <span class="sidebar-menu-text">Collapse Menu</span>
+              </div>
+          </button>
+      </li>
+  </ul>
+</nav>
+        <main>
+            <section class="daily-stats">
+                <div class="stats-container">
+                    <div class="progress-bar mentioned">
+                        <img src="img/twitter-icon.png" alt="">
+                    </div>
+                    <div><span>400</span>Mentioned</div>
+                </div>
+                <div class="stats-container">
+                    <div class="progress-bar sales">
+                        <img src="img/dollars-icon.png" alt="">
+                    </div>
+                    <div><span>13140$</span>Today Sales</div>
+                </div>
+                <div class="stats-container">
+                    <div class="progress-bar visitors">
+                        <img src="img/visitor-icon.png" alt="">
+                    </div>
+                    <div><span>9001</span>Today Visitors</div>
+                </div>
+                <div class="stats-container">
+                    <div class="progress-bar message">
+                        <div><img src="img/email2-icon.png" alt=""></div>
+                    </div>
+                    <div><span>350</span>New Message</div>
+                </div>
+            </section>
+            <section class="sectionMain">
+                <section class="sectionLeft">
+                    <div class="site-statistic">
+                        <div class="site-statistic-header">
+                            <span>SITE STATISTIC</span>
+                            <button><img src="./img/gear-icon.png" alt=""></button>
+                        </div>
+                        <canvas id="site-statistic-сhart"></canvas>
+                    </div>
+                    <div class="todo-list">
+                        <div class="todo-list-header">
+                            <p>ToDo List</p><button><img src="img/plus-icon.png" alt=""></button>
+                        </div>
+                        <div class="todo-list-items">
+                            <ul>
+                                <li>
+                                    <div class="item-text"><img src="img/dotes-todo-icon.png" alt="">Do your ToDo List
+                                        today at 6AM GMT </div>
+                                    <div><button><img src="img/check-icon.png" alt=""></button><button><img
+                                                src="img/remove-icon.png" alt=""></button></div>
+                                </li>
+                                <li>
+                                    <div class="item-text"><img src="img/dotes-todo-icon.png" alt="">Do your ToDo List
+                                        today at 6AM GMT </div>
+                                    <div><button><img src="img/check-icon.png" alt=""></button><button><img
+                                                src="img/remove-icon.png" alt=""></button></div>
+                                </li>
+                                <li>
+                                    <div class="item-text"><img src="img/dotes-todo-icon.png" alt="">Do your ToDo List
+                                        today at 6AM GMT </div>
+                                    <div><button><img src="img/check-icon.png" alt=""></button><button><img
+                                                src="img/remove-icon.png" alt=""></button></div>
+                                </li>
+                                <li>
+                                    <div class="item-text"><img src="img/dotes-todo-icon.png" alt="">Do your ToDo List
+                                        today at 6AM GMT </div>
+                                    <div><button><img src="img/check-icon.png" alt=""></button><button><img
+                                                src="img/remove-icon.png" alt=""></button></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gbmails">
+                        <div class="gb">
+                            <p class="info">113/200GB</p>
+                            <p class="text">From your hosting usage</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="emails">
+                            <p class="info">535/986</p>
+                            <p class="text">Emails read</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications">
+                        <div class="notifications-header">
+                            <p>Notifications</p><button><img src="img/gear-icon.png" alt=""></button>
+                        </div>
+                        <div class="notifications-items">
+                            <ul>
+                                <li><img src="img/twitter-icon.png" alt="">
+                                    <div class="text mentioned">There are 5 new twitter messages are waiting you for
+                                        reply them!</div>
+                                </li>
+                                <li><img src="img/email2-icon.png" alt="">
+                                    <div class="text message">There are 5 new twitter messages are waiting you for reply
+                                        them!</div>
+                                </li>
+                                <li><img src="img/dollars-icon.png" alt="">
+                                    <div class="text sales">There are 5 new twitter messages are waiting you for reply
+                                        them!</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="sectionRight">
+                    <div class="yearly-sales">
+                        <div class="yearly-sales-chart">
+                            <span>
+                                Yearly Sales
+                            </span>
+                            <canvas id="yearly-sales-chart" width="290" height="120"></canvas>
+                        </div>
+                        <div class="bars">
+                            <div class="sales">
+                                <p class="info">536,030$</p>
+                                <p class="text">Yearly Sales</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="visitors">
+                                <p class="info">4204284</p>
+                                <p class="text">Yearly Visitors</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                            <div class="customers">
+                                <p class="info">42000</p>
+                                <p class="text">Yearly Customers</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weather">
+                        <img src="img/sun-icon.png" alt="">
+                        <p class="temperature image-container">44</p>
+                        <p class="image-container location">Amman <br>Sunny</p>
+                    </div>
+                    <div class="month-calendar">
+                        <div class="month">
+                            <button class="prev"><img src="img/arrow-calendar.png" alt="arrow-icon"></button>
+                            <div>
+                                <span class="month-name"></span>
+                                <span class="year-name"></span>
+                            </div>
+                            <button class="next"><img src="img/arrow-calendar.png" alt="arrow-icon"></button>
+                        </div>
+                        <ul class="weekdays">
+                            <li>S</li>
+                            <li>M</li>
+                            <li>T</li>
+                            <li>W</li>
+                            <li>T</li>
+                            <li>F</li>
+                            <li>S</li>
+                        </ul>
+                        <ul class="days">
+                        </ul>
+                        <div class="reminders">
+                            <div>Meet your friends today <span>11:30</span></div>
+                            <div>Tweet "thanks" for your followers <span>21:00</span></div>
+                        </div>
+                    </div>
+                    <div class="data-graph">
+                        <div class="data-graph-header">
+                            <span>Data graph</span>
+                            <button><img src="./img/gear-icon.png" alt=""></button>
+                        </div>
+                        <div class="data-graph-section">
+                            <div class="data-graph-section-data">
+                                <span>$540 (0.4%)</span>
+                                <span>Today</span>
+                            </div>
+                            <canvas id="data-graph-chart" width="240" height="50"></canvas>
+                        </div>
+                        <div class="total-earned">
+                            <div class="total-earned-text">
+                                <span class="price">433,22 $</span>
+                                <span class="text">Total earned</span>
+                            </div>
+                            <div class="data-graph-bar">
+                                <canvas id="data-graph-bar-chart" width="90" height="40"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/app.min.js"></script>
 </body>
 </html>
